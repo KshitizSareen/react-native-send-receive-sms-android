@@ -43,11 +43,57 @@
   - Add `new RNReactNativeAndroidSmsPackage()` to the `List<IReactPackage>` returned by the `Packages` method
 
 
-## Usage for Sending SMS
+## Usage for Reading Messages
 ```javascript
-import {} from 'react-native-send-receive-sms-android';
+import {GetMessages} from 'react-native-send-receive-sms-android';
 
-// TODO: What to do with the module?
-RNReactNativeAndroidSms;
+try
+{
+GetMessages(NumberOfMessages).then((messages)=>{
+	for(const message of messages)
+	{
+		console.log(message.address,
+		message.subject,
+		message.status,
+		message.body,
+		message.DateOfMessage,
+		message.person);
+
+	}
+}).catch((err)=>{
+	console.log(err);
+})
+}
+catch(err)
+{
+	console.log(err);
+}
 ```
+
+## Options
+
+NumberOfMessages - Integer
+
+## Usage for Sending Messages
+```javascript
+import {SendMessage} from 'react-native-send-receive-sms-android';
+
+try
+{
+SendMessage(Message,PhoneNo).then((result)=>{
+	console.log(result)
+}).catch((err)=>{
+	console.log(err);
+})
+}
+catch(err)
+{
+	console.log(err);
+}
+```
+
+## Options
+
+Message - String
+PhoneNo - String
   

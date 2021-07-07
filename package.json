@@ -1,14 +1,20 @@
 
 {
   "name": "react-native-send-receive-sms-android",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "send",
+    "receive",
+    "android",
+    "sms",
+    "message",
+    "read"
   ],
   "author": "",
   "license": "",
@@ -16,5 +22,9 @@
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
 
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KshitizSareen/react-native-send-receive-sms-android.git"
   }
 }
